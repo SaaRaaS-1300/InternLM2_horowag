@@ -39,7 +39,7 @@
 
 ## 🌠**程序介绍**
 
-**How to Install ? 👇**
+### **How to Install ? 👇**
 
     pip install -r requirements.txt
 
@@ -47,8 +47,50 @@
 
     python start.py
 
-**对于细节分析，需要有以下子应用报告：**
+**对于细节分析，需要有以下子应用报告及开发仓库：**
 
-+ ****
-+ ****
-+ ****
+**1. [Horowag - 开发仓库](https://github.com/SaaRaaS-1300/InternLM_openNotebook/)**
+
+**2. Chatty-Horo-轻灵细语**
+
+**3. Mini-Horo-巧耳**
+
+**4. Horowag-微调开发**
+
+### **Resource About Models 👇** 
+
+**1. InternLM2-Chat-7b + 微调 = [Horowag_7b_Chat_Ani](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)**
+
+**2. InternLM2-Chat-1_8b + 微调 = [Horowag_1_8b_Chat_Mini](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_Mini)**
+
+## 🌠**OpenXLab**
+
+**下载模型的代码示例：**
+
+    from openxlab.model import download
+    # 加载基础的语言模型 Horowag_7b
+    download(model_repo='SaaRaaS/Horowag_7b',
+             output='Horowag_7b')
+
+**目前模型应用的部署情况：**
+
++ **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
++ **OpenXLab模型链接：**[OpenXLab-Horo](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
+
+## 🤖贡献墙🤖
+
++ **🆕那路 -> Horowag_7b🆕**
+
++ **🆕那路 -> Horowag_Mini🆕**
+
++ **🆕那路 -> Horowag_7b_Chat_Ani🆕**
+
++ **🆕那路 -> WebUI🆕**
+
++ **✨[Claire 同学](https://space.bilibili.com/14888344?spm_id_from=333.1007.0.0) -> 提供美术支持✨**
+
++ **✨[Claire 同学](https://space.bilibili.com/14888344?spm_id_from=333.1007.0.0) + 那路 -> 制备微调数据集✨**
+
+## 👻致谢👻
+
++ **☃️感谢 [书生·浦语开源训练营](https://github.com/InternLM) 的技术指导以及算力☃️**
