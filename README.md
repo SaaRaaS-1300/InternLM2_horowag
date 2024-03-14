@@ -49,13 +49,13 @@
 
 **对于细节分析，需要有以下子应用报告及开发仓库：**
 
-**1. [Horowag - 开发仓库](https://github.com/SaaRaaS-1300/InternLM_openNotebook/)**
+**1. [Horowag-开发仓库](https://github.com/SaaRaaS-1300/InternLM_openNotebook/)**
 
-**2. Chatty-Horo-轻灵细语**
+**2. 子报告 -> [Chatty-Horo-轻灵细语](https://github.com/SaaRaaS-1300/InternLM2_horowag/tree/main/Chatty_Horo_Voich)**
 
-**3. Mini-Horo-巧耳**
+**3. 子报告 -> [Mini-Horo-巧耳](https://github.com/SaaRaaS-1300/InternLM2_horowag/tree/main/Horowag_Mini)**
 
-**4. Horowag-微调开发**
+**4. 子报告 -> [Horowag-微调开发](https://github.com/SaaRaaS-1300/InternLM2_horowag/tree/main/Horowag_7b_Craft)**
 
 ### **Resource About Models 👇** 
 
