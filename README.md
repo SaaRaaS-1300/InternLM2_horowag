@@ -72,6 +72,8 @@
     download(model_repo='SaaRaaS/Horowag_7b',
              output='Horowag_7b')
 
+![alt text](image/img-5.png)
+
 **目前模型应用的部署情况：**
 
 + **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
