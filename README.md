@@ -29,4 +29,26 @@
 ---
 ![alt text](image/img-3.jpg)
 
-**除去基本的 `Horowag_7b` 链条，为了能够丰富语言模型角色扮演的模式和手段，我还推出了 `Horowag_7b_Craft`、`Horowag_Mini` 和 `Chatty_Horo_Voich`**
+## 🌠**衍生应用**
+
+**除去基本的 `Horowag_7b` 链条，为了能够丰富语言模型角色扮演的模式和手段，我还推出了 `Horowag_7b_Craft`、`Horowag_Mini` 和 `Chatty_Horo_Voich` 等多个模型。其中，`Horowag_Mini` 基于 `InternLM2-Chat-1.8B` 模型，在低成本、低语料、低部署条件的约束之下，从角色提取、数据制备、模型微调再到应用部署，为动漫角色扮演 `LLM` 提供了可行的解决方案。最终 `Horowag_Mini` 演变为小参数应用 `Mini-Horo-巧耳`（下文称 `Mini-赫萝`)。`Mini-赫萝`尝试结合了小说文本、动漫对话等多种语料，为语言模型微调提供了独具特色的模式。确认提取的角色之后，该模型在微调任务中会创造对应的角色语言辅助规则，对数据进行针对性过滤。`Mini-赫萝` 在部署阶段更是融合 `Langchain` 技术，进一步提升了模型的角色代入能力。**
+
+![alt text](image/img-4.png)
+
+**另一个非常成熟的应用是 `Chatty_Horo_Voich`。该架构图展示了 `Chatty_Horo_Voich` 的核心构思。其中，我们输入的内容，也就是 `input text` 会进入 `assistant` 模块以及 `conversation chain`。这个对话链就是我们上一个视频提及的具有 `memory` 特性的架构，利用 `horowag` 模型生成赫萝的回答之后，`output text` 会在输出上稍加等待，先让 `assistant` 将输出内容置入 `translation chain` 完成中文向日语的转化，再将此日语语料加入微调后的`VITS` 模型，输出音频。当音频输出被检测到之后，`horowag` 才会输出 `output` 文本。保证用户在读取模型回答的时候，同步接受音频内容。**
+
+## 🌠**程序介绍**
+
+**How to Install ? 👇**
+
+    pip install -r requirements.txt
+
+**选择你想要使用的模型，点开文件之后 ->**
+
+    python start.py
+
+**对于细节分析，需要有以下子应用报告：**
+
++ ****
++ ****
++ ****
