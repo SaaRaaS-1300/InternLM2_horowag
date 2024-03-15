@@ -1,5 +1,5 @@
 from config.chatty_chain_constructor import horowag_conversation_chain, qwen_translation_chain
-from config.chatty_model_rebuilder import Qwen_Assistant, Horowag
+from config.chatty_model_rebuilder import _Assistant, Horowag
 from langchain.prompts import PromptTemplate
 from openxlab.model import download
 import subprocess
@@ -32,10 +32,10 @@ download(model_repo='SaaRaaS/Horowag_7b',
          output='Horowag_7b')
 print("Horowag_7b 下载完毕")
 
-# 加载辅助的语言模型 Qwen1_5
-download(model_repo='SaaRaaS/Qwen_Auxiliary_AWQ',
-         output='Qwen_Auxiliary_AWQ')
-print("Qwen_Auxiliary_AWQ 下载完毕")
+# 加载辅助的语言模型
+download(model_repo='SaaRaaS/Horowag_Mini',
+         output='Horowag_Mini')
+print("Horowag_Mini 下载完毕")
 
 # 加载语音微淘模型 Speaker
 download(model_repo='SaaRaaS/Speaker_Tuning_Model',
@@ -43,15 +43,15 @@ download(model_repo='SaaRaaS/Speaker_Tuning_Model',
 print("Speaker_Tuning_Model 下载完毕")
 
 # Qwen 模型初始化
-Qwen_model = Qwen_Assistant(
-    model_path="Qwen_Auxiliary_AWQ",
+_model = _Assistant(
+    model_path="Horowag_Mini",
     top_p=0.25,
     max_token=128, 
     temperature=0.1
 )
 
 # 构建翻译链
-qwen_translation_chain = qwen_translation_chain(Qwen_model)
+qwen_translation_chain = qwen_translation_chain(_model)
 
 # 定义音频构建函数
 def voice_builder(context: str):
