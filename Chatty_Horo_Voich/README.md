@@ -62,12 +62,12 @@
 
 ![alt text](src/pic/Bg-Pic-3.png)
 
-**Translation Chain 是一个很简单的构造，我们先加载好 `Qwen` 模型，然后根据以下代码逻辑完成 Chain 构建。其中，`system prompt` 可以根据不同角色稍作修改：**
+**Translation Chain 是一个很简单的构造，我们先加载好 `` 模型，然后根据以下代码逻辑完成 Chain 构建。其中，`system prompt` 可以根据不同角色稍作修改：**
 
     # 构建翻译链
-    def qwen_translation_chain(llm):
+    def _translation_chain(llm):
         '''
-            Langchain(Chat) + Qwen(Translation)
+            Langchain(Chat) + (Translation)
         '''
         # system + human
         template = """你是一个可靠的翻译专家。
@@ -115,7 +115,7 @@
 
 ## **🍔WebUI + Audio Output🍔**
 
-**咱们来搞定UI细节，因为输出音频的时序逻辑，必然会使用户等待较长的时间，为了顾及体验感，我引入了 `Qwen1.5` 的 `AWQ量化` 模型，降低显存占用的同时，提升运行速度。我也写了双页面UI，让用户既可以使用生成音频的 `Voicy_Voicy` 聊天策略，也可以选取更加快速的 `Chatty_Chatty` 文本聊天策略。这样间接提升用户的体验感。**
+**咱们来搞定UI细节，因为输出音频的时序逻辑，必然会使用户等待较长的时间，为了顾及体验感，我引入了 `1.5` 的 `AWQ量化` 模型，降低显存占用的同时，提升运行速度。我也写了双页面UI，让用户既可以使用生成音频的 `Voicy_Voicy` 聊天策略，也可以选取更加快速的 `Chatty_Chatty` 文本聊天策略。这样间接提升用户的体验感。**
 
 ![alt text](src/pic/Bg-Pic-5.png)
 
