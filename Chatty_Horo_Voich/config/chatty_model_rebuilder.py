@@ -59,9 +59,9 @@ class Horowag(LLM):
 
 
 """
-    推荐使用 Qwen1_5 及其微调模型
+    推荐使用 小参数模型
 """
-class Qwen_Assistant(LLM):
+class _Assistant(LLM):
     # 自定义 LLM 类
     tokenizer: AutoTokenizer = None
     model: AutoModelForCausalLM = None
@@ -77,7 +77,7 @@ class Qwen_Assistant(LLM):
         # model_path: 模型路径
         # 从本地初始化模型
         super().__init__()
-        print("正在加载 Qwen_Assistant 模型...")
+        print("正在加载 _Assistant 模型...")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.model = AutoModelForCausalLM.from_pretrained(model_path, device_map="auto")
         self.model = self.model.eval()
@@ -118,5 +118,5 @@ class Qwen_Assistant(LLM):
     
     @property
     def _llm_type(self) -> str:
-        return "Qwen"
+        return "InternLM"
 
