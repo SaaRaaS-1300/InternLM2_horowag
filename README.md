@@ -79,6 +79,7 @@
 **目前模型应用的部署情况：**
 
 + **应用程序链接** <<< 🍏[Chatty-Horo](https://openxlab.org.cn/apps/detail/SaaRaaS/Chatty-Horo)🍎 >>>
+
 + **OpenXLab模型链接：**[OpenXLab-Horo](https://openxlab.org.cn/models/detail/SaaRaaS/Horowag_7b)
 
 ## 🤖贡献墙🤖
@@ -98,3 +99,7 @@
 ## 👻致谢👻
 
 + **☃️感谢 [书生·浦语开源训练营](https://github.com/InternLM) 的技术指导以及算力☃️**
+
++ **恭喜本作品获得✨书生·浦源大模型挑战赛(春季赛)-创新创意奖✨**
+
++ **如有后续，敬请期待... ...**
